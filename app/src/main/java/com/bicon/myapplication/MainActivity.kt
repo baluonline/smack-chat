@@ -1,5 +1,6 @@
 package com.bicon.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.google.android.material.navigation.NavigationView
@@ -10,6 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bicon.myapplication.databinding.ActivityMainBinding
+import com.bicon.myapplication.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,7 +49,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun loginBtnNavHeader(view: View){
-
+        var loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
     fun addChannelClicked(view: View){
 
